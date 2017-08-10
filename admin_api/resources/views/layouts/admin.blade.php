@@ -1,0 +1,7 @@
+@include('admin.common.header')
+@include('admin.common.sidebar')
+@include('admin.common.footer')
+@yield('header')
+@yield('sidebar')
+@yield('content')
+@yield('footer')

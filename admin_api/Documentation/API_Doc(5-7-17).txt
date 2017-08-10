@@ -1,0 +1,67 @@
+Response
+		//Success
+        $this->success = array('status_code'=>200,'ack'=>'success');
+		//Request Error
+		$this->bad_request = array('status_code'=>400,'ack'=>'Bad Request');
+		$this->server_error = array('status_code'=>500,'ack'=>'Internal Server Error');
+		//Fields Errors
+        $this->name = array('status_code'=>601,'ack'=>'Name Field is Empty');
+        $this->email = array('status_code'=>602,'ack'=>'Email Field is Empty');
+        $this->email_exist = array('status_code'=>603,'ack'=>'Email Field is Empty');
+        $this->phone = array('status_code'=>604,'ack'=>'Phone Number Field is Empty');
+        $this->phone_exist = array('status_code'=>605,'ack'=>'Phone Number Field is Empty');
+        $this->password = array('status_code'=>606,'ack'=>'Password Field is Empty');
+		$this->new_password = array('status_code'=>607,'ack'=>'New Password Field is Empty');
+        $this->confirm_password = array('status_code'=>608,'ack'=>'Confirm Password Field is Empty');
+        $this->confirm_password_not_match = array('status_code'=>609,'ack'=>'Confirm Password does not matching');
+        $this->password_not_match = array('status_code'=>610,'ack'=>'Old Password does not Matching');
+        $this->login_invalid = array('status_code'=>611,'ack'=>'Invalid Email or Password');
+        $this->no_user_exist = array('status_code'=>612,'ack'=>'No User Exist with this Email ID');
+        $this->description = array('status_code'=>613,'ack'=>'Description Field is Empty');
+        $this->address = array('status_code'=>614,'ack'=>'Address Field is Empty');
+
+1		API Name: register
+		URL: http://35.154.215.19/sba/public/registeruser
+		Purpose:
+		no.	Parameter 						desc
+		1		username						user's name
+		2		email								user's email id
+		3		phone								user's Phone number
+		4		password						set password by user
+		5		confirm_password			set confirm password same as password
+
+2		API Name: login
+		URL: http://35.154.215.19/sba/public/loginuser
+		no.	Parameter 						desc
+		1		login_email						user's email id
+		2		login_password				user's password
+
+3		API Name: reset password
+		URL: http://35.154.215.19/sba/public/reset_password
+		no.	Parameter 						desc
+		1		login_email						user's email id
+
+4		API Name: contact_us
+		URL: http://35.154.215.19/sba/public/contact
+		no.	Parameter 						desc
+		1		name								user's name
+		2		email								user's email id
+		3		phone								user's phone number
+		4		description						description about his requirement
+
+4		API Name: change_password
+		URL: http://35.154.215.19/sba/public/change_password	
+		no.	Parameter 						desc
+		1		user_id							User's ID
+		2		old_password					Old Password (Pre saved in database)
+		3.		new_password				New Password (Password which user wants to set)
+		3.		confirm_password			Confirm Password (Confirm Password matches with New Password)
+		
+6		API Name: create_projects
+		URL: http://35.154.215.19/sba/public/create_projects
+		no.	Parameter 						desc
+		1		name								Project's name
+		2		address							Project's address
+		3		description						Project's description
+		4		user_id							User's ID
+
