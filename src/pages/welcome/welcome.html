@@ -1,0 +1,51 @@
+<!--
+  Generated template for the WelcomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true" persistent="true">
+	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>SmartBuild Asia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center>
+	<div class="welcome-info">
+	  <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+	  <div class="user-name">Welcome,<br>{{username}}</div>
+	</div>
+	<div text-center>
+		<div class="user-icon"><img src="assets/images/user.png"></div>
+
+	</div>
+  <ion-list>
+
+  <ion-item padding-right class="btns">
+
+    <button ion-button full class="login-btn" (click)="map_view()"><ion-icon><i class="material-icons">playlist_add</i></ion-icon>&nbsp; Give Information</button>
+	<!-- <button ion-button full class="login-btn" (click)="give_info()"><ion-icon><img src="assets/images/give-info.png"></ion-icon>&nbsp; Give Information</button> -->
+  </ion-item>
+  <ion-item padding-right  text-center class="or-text">
+	<span>or</span>
+  </ion-item>
+   <ion-item padding-right class="btns">
+    <button ion-button full class="refer-btn" (click)="refer_friend()"><ion-icon><i class="material-icons">person_add</i></ion-icon>&nbsp; Refer a Friend</button>
+  </ion-item>
+
+  <ion-item padding-right text-center class="cong-text">
+	<p>Congratulations!<br>You have earned 30$ last week.</p>
+  </ion-item>
+
+   <ion-item padding-right class="btns">
+    <button ion-button full class="signin-btn" (click)="my_submission()">My Submissions</button>
+  </ion-item>
+
+  </ion-list>
+</ion-content>

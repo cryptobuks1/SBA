@@ -1,0 +1,24 @@
+<ion-menu [content]="content" persistent="true">
+  <ion-header>
+    <ion-toolbar menuClose (click)="myprofile();">
+		<div class="user-img"><img src="assets/images/user.png"></div>
+      <ion-title class="main-tl">{{username}}<br><span>$750.00</span></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list class="left-nav">
+		<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}}</button>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-list class="footer-nav">
+		<button menuClose ion-item *ngFor="let p of footerpages" (click)="openPage(p)">{{p.title}}</button>
+
+    </ion-list>
+  </ion-footer>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

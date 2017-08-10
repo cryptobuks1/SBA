@@ -1,0 +1,61 @@
+<!--
+  Generated template for the ReferalPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar hideBackButton="true" persistent="true">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>My Referrals</ion-title>
+  </ion-navbar>
+      <ion-toolbar no-border-top>
+		<ion-segment [(ngModel)]="refer_tab">
+			<ion-segment-button value="Pending">Pending</ion-segment-button>
+			<ion-segment-button value="Completed">Completed</ion-segment-button>
+		</ion-segment>
+	</ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="cards-bg add-project mysubmission">
+
+
+	<div [ngSwitch]="refer_tab">
+	
+		
+		<ion-list *ngSwitchCase="'Pending'">
+		  <ion-item class="info-list">
+			  <h2>Eugene Namar</h2>
+			  <p>Used the code but is waiting for acceptance of his first information submitted</p>
+			  <ion-note item-end text-right><span>$20</span><br>Jul 15</ion-note>
+			</ion-item>
+			<ion-item class="info-list">
+		  	<h2>Denys Kutsevalov</h2>
+		 	 <p>Used the code but did not submit any information.</p>
+		  	<ion-note item-end text-right><span>$20</span><br>Jul 15</ion-note>
+			</ion-item>
+		</ion-list>
+
+		<ion-list *ngSwitchCase="'Completed'">
+		  <ion-item class="info-list">
+			  <h2>Denys Kutsevalov</h2>
+			  <p>Used the code and got his first submitted information accepted</p>
+			  <ion-note item-end text-right><span>$20</span><br>Jul 15</ion-note>
+			</ion-item>
+			<ion-item class="info-list">
+			  <h2>Andrey Tinkov</h2>
+			  <p>Used the code and got his first submitted information accepted</p>
+			  <ion-note item-end text-right><span>$20</span><br>Jul 15</ion-note>
+			</ion-item>
+		</ion-list>
+		
+	</div>
+  
+	<ion-item class="btns sub-btn">
+		<button ion-button full class="login-btn" (click)="referfriend()"><i class="material-icons">person_add</i>&nbsp;&nbsp;&nbsp;Refer a Friend	</button>
+	</ion-item>
+	
+</ion-content>

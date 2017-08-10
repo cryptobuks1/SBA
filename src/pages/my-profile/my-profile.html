@@ -1,0 +1,65 @@
+<!--
+  Generated template for the MyProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar hideBackButton="true" persistent="true">
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+    <ion-title>My Profile <span item-left class="edit submission-edit" (click)="edit_profile()">Edit</span></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center>
+	<div class="welcome-info">
+	  <div class="welcome-img"><img src="assets/images/welcome.png"></div>
+	  <div class="user-name">Denys<br>Kutsevalov</div>
+
+	</div>
+	<div text-center>
+		<div class="user-icon"><img src="assets/images/user.png"></div>
+
+	</div>
+	<ion-list>
+	<ion-grid class="top-grid">
+	  <ion-row>
+		<ion-col col-6>
+			<h2>$15</h2>
+			<h5>Still Due</h5>
+		</ion-col>
+		<ion-col col-6>
+			<h2>$178</h2>
+			<h5>Total Received</h5>
+		</ion-col>
+	  </ion-row>
+	</ion-grid>
+	</ion-list>
+	  <ion-list>
+	  <ion-item padding-right>
+		  <ion-label stacked>Contact Email</ion-label>
+		  <ion-input type="text" value="denys@gmail.com"></ion-input>
+		</ion-item>
+
+	  </ion-list>
+	  <ion-list>
+	  
+		<ion-item padding-right>
+		<ion-label stacked>Phone</ion-label>
+		<ion-input type="text" value="+6578789090"></ion-input>
+	  </ion-item>
+	  
+
+	  </ion-list>
+</ion-content>
+<ion-footer>
+	<ion-item padding-right class="btns">
+		<button ion-button full class="signin-btn" (click)="get_money()">How to get my money</button>
+	</ion-item>
+</ion-footer>
+

@@ -1,0 +1,38 @@
+<!--
+  Generated template for the InformationPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Create Project</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="cards-bg add-project">
+  <ion-list>
+  <ion-item padding-right>
+      <ion-label stacked>Project name</ion-label>
+      <ion-textarea placeholder="#1 Loft_Proposed Erection Of 1 Block Of 8 Storey Residential Development"></ion-textarea>
+    </ion-item>
+
+    <ion-item padding-right>
+    <ion-label stacked>Description</ion-label>
+    <ion-textarea placeholder="Proposed Erection Of 1 Block Of 8 Storey
+Residential Redevelopement With Attric (Total 80 Units), Mechanical Car Parks And Provision For A swimming Pool"></ion-textarea>
+  </ion-item>
+  <ion-item class="add-btn"  padding-right>
+  <ion-label stacked>Address<button ion-button outline class="p-btn">map</button></ion-label>
+  <ion-input type="text" placeholder="Lorong 24 Geylang"></ion-input>
+
+</ion-item>
+
+<!--  -->
+  <ion-item class="btns">
+    <button ion-button full class="login-btn" (click)="project_detail()">Create Project</button>
+  </ion-item>
+
+  </ion-list>
+</ion-content>
